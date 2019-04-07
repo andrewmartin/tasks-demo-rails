@@ -13,6 +13,8 @@ Create a Rails endpoint that returns a list of 30 or so users with the following
 
 Seed the database with test data of your choosing. There is a one to many relationship between users and tasks. Each task can only have one location. There is no relationship between users and locations.
 
+See the [React Frontend Demo App](https://github.com/andrewmartin/tasks-demo-react).
+
 ## Quickstart
 
 1. `bundle
