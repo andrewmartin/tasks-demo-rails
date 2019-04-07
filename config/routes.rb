@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :tasks, only: [:index, :update]
 end
