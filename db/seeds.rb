@@ -1,7 +1,26 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+Role.destroy_all
+Location.destroy_all
+Task.destroy_all
+User.destroy_all
+
+locations = ['Los Angeles', 'San Francisco', 'Denver']
+tasks = ['wash car', 'mow lawn', 'clean windows', 'run dishwasher', 'trim hedges']
+roles = ['Admin', 'Marketing', 'Support', 'User']
+
+roles.each do |name|
+  Role.create!(name: name)
+end
+
+20.times do
+  @user = User.create!(name: Faker::Name.unique.name)
+  @user.build_user_role(role_id: Role.all.sample.id)
+  @user.save!
+
+  @task = @user.tasks.create!(name: tasks.sample)
+  @location = Location.create(name: locations.sample)
+
+  @task.build_location(@location.attributes)
+  @task.save!
+end
