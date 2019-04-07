@@ -18,9 +18,11 @@ end
   @user.build_user_role(role_id: Role.all.sample.id)
   @user.save!
 
-  @task = @user.tasks.create!(name: tasks.sample)
-  @location = Location.create(name: locations.sample)
+  rand(1..5).times do
+    @task = @user.tasks.create!(name: tasks.sample)
+    @location = Location.create(name: locations.sample)
 
-  @task.build_location(@location.attributes)
-  @task.save!
+    @task.build_location(@location.attributes)
+    @task.save!
+  end
 end
