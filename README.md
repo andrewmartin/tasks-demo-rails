@@ -1,24 +1,10 @@
-# README
+# Task API Example App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic demo application to showcase the backend development abilities of Andrew Martin. It was built using Rails.
 
-Things you may want to cover:
+## Quickstart
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. `bundle
+2. `rails db:migrate`
+3. `rails db:seed`
+4. `foreman start`
