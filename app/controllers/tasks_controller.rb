@@ -3,6 +3,7 @@ class TasksController < ApplicationController
 
   def index
     @tasks = Task.where(completed: false).paginate(page: params[:page], per_page: params[:per_page])
+    @total = Task.where(completed: false).count
   end
 
   def update
