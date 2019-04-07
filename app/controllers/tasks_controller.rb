@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:update]
 
   def index
-    @tasks = Task.where(completed: nil).paginate(page: params[:page], per_page: params[:per_page])
+    @tasks = Task.where(completed: false).paginate(page: params[:page], per_page: params[:per_page])
   end
 
   def update
