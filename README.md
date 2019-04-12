@@ -17,7 +17,7 @@ See the [React Frontend Demo App](https://github.com/andrewmartin/tasks-demo-rea
 
 ## Quickstart
 
-1. `bundle
+1. `bundle`
 2. `rails db:migrate`
 3. `rails db:seed`
 4. `foreman start`
