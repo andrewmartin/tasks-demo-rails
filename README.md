@@ -17,6 +17,8 @@ See the [React Frontend Demo App](https://github.com/andrewmartin/tasks-demo-rea
 
 ## Quickstart
 
+Assuming you have [`foreman`](https://github.com/ddollar/foreman) installed:
+
 1. `bundle`
 2. `rails db:migrate`
 3. `rails db:seed`
